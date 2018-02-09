@@ -8,20 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Your Contacts:</h1>
-      @foreach (var contact in Model)
-      {
-        <li><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></li>
-      }
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h1>Your Contacts:</h1>
+        </div>
+        <div class="panel-body">
+          @foreach (var contact in Model)
+          {
+            <li><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></li>
+          }
+        </div>
+      </div>
       <form class="inline" action="/contacts/new" method="get">
         <button class="btn btn-success" type="submit" name="button">Add Contact</button>
       </form>
       <form class="inline" action="/contacts/delete" method="post">
         <button class="btn btn-danger" type="submit" name="button">Delete All</button>
       </form>
-
     </div>
-
-
   </body>
 </html>

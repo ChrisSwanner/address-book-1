@@ -1,3 +1,21 @@
 .inline {
   display: inline-block;
 }
+
+.panel {
+  margin-top: 20px;
+}
+
+body {
+  background-color: black;
+}
+
+.whiteText {
+  color: white;
+}
+
+.panel-info .panel-heading {
+  background-color: lightgrey;
+  color: black;
+  text-align: center;
+}

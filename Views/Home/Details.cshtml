@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css">
     <title>Item Details</title>
   </head>
   <body>
     <div class="container">
-      <h1>Name: @Model.GetName()</h1>
-      <h3>Phone: @Model.GetPhone()</h3>
-      <h3>Address: @Model.GetAddress()</h3>
-      <form action="/contacts/new" method="get">
-        <button class="btn btn-danger" type="submit" name="button">Add Contact</button>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h2>@Model.GetName()</h1>
+        </div>
+        <div class="panel-body">
+          <h3>Phone: @Model.GetPhone()</h3>
+          <h3>Address: @Model.GetAddress()</h3>
+        </div>
+      </div>
+
+      <form class="inline" action="/contacts/new" method="get">
+        <button class="btn btn-success" type="submit" name="button">Add Contact</button>
       </form>
-      <form action="/" method="get">
-        <button class="btn btn-danger" type="submit" name="button">View Contacts</button>
+      <form class="inline" action="/" method="get">
+        <button class="btn btn-info" type="submit" name="button">View Contacts</button>
       </form>
     </div>
   </body>

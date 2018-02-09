@@ -8,9 +8,9 @@ namespace Address_Book.Models
     private string _phone;
     private string _address;
     private int _id;
-    private static List<Item> _instances = new List<Item> {};
+    private static List<Contact> _instances = new List<Contact> {};
 
-    public Item(string name, string phone, string address)
+    public Contact(string name, string phone, string address)
     {
       _name = name;
       _phone = phone;
@@ -54,7 +54,7 @@ namespace Address_Book.Models
       return _id;
     }
 
-    public static List<item> GetAll()
+    public static List<Contact> GetAll()
     {
       return _instances;
     }
@@ -63,7 +63,8 @@ namespace Address_Book.Models
     {
       _instances.Clear();
     }
-    public static Item Find(int searchId);
+
+    public static Contact Find(int searchId)
     {
       return _instances[searchId-1];
     }

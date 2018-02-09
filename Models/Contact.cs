@@ -68,6 +68,5 @@ namespace Address_Book.Models
     {
       return _instances[searchId-1];
     }
-
   }
 }

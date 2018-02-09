@@ -7,12 +7,14 @@
   </head>
   <body>
     <div class="container">
-      @foreach (var item in @Model["contacts"])
+      <h1>Your Contacts:</h1>
+      @foreach (var contact in Model)
       {
-        <li><a href=''>@Contact.GetName()</a></li>
+        <li><a href='/contacts/@contact.GetId()'>@contact.GetName()</a></li>
       }
-
+      <a href ='/contacts/new'>Add new Contact</a>
     </div>
+
 
   </body>
 </html>

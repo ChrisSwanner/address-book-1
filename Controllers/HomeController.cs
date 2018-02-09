@@ -26,6 +26,15 @@ namespace Address_Book.Controllers
     string contactPhone = Request.Form["contact-phone"];
     string contactAddress = Request.Form["contact-address"];
     Contact newContact = new Contact(contactName, contactPhone, contactAddress);
+    List<Contact> allContacts = Contact.GetAll();
+    return View("Index", allContacts);
+    }
+
+    [HttpGet("/contacts/{id}")]
+    public ActionResult Details(int id)
+    {
+    Contact contact = Contact.Find(id);
+    return View(contact);
     }
 
   }

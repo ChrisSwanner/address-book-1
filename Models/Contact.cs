@@ -16,7 +16,7 @@ namespace Address_Book.Models
       _phone = phone;
       _address = address;
       _instances.Add(this);
-      _id = instances.Count;
+      _id = _instances.Count;
     }
 
     public string GetName()
@@ -24,7 +24,7 @@ namespace Address_Book.Models
       return _name;
     }
 
-    public void SetName()
+    public void SetName(string newName)
     {
       _name = newName;
     }
@@ -34,7 +34,7 @@ namespace Address_Book.Models
       return _phone;
     }
 
-    public void SetPhone()
+    public void SetPhone(string newPhone)
     {
       _phone = newPhone;
     }
@@ -44,7 +44,7 @@ namespace Address_Book.Models
       return _address;
     }
 
-    public void SetAddress()
+    public void SetAddress(string newAddress)
     {
       _address = newAddress;
     }
